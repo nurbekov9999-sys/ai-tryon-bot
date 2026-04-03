@@ -122,7 +122,19 @@ ai-tryon-bot/
 
 ## Screenshots
 
-_Coming soon — demo screenshots of the bot in action._
+### Motorcycle Virtual Try-On
+User uploads 3 photos → AI generates realistic images of the person on a motorcycle.
+
+![Examples of generated results](screenshots/01-moto-examples.png)
+![Upload face photo](screenshots/02-moto-upload-face.png)
+![AI-generated result](screenshots/03-moto-result.png)
+
+### Curtain / Blinds Virtual Try-On
+User uploads a room photo → selects curtain type and color → AI generates a preview.
+
+![Select product type](screenshots/04-curtain-select.png)
+![Upload room photo](screenshots/05-curtain-upload.png)
+![AI-generated result](screenshots/06-curtain-result.png)
 
 ## License
 

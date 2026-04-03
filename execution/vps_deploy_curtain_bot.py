@@ -11,15 +11,12 @@ import paramiko
 from dotenv import load_dotenv
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-FALLBACK_ENV_PATH = Path("O:\\OpenCloud \u0432\u044b\u0433\u0440\u0443\u0437\u043a\u0430\\.env")
-DEFAULT_REMOTE_ROOT = "/root/projects/curtain-bot"
-DEFAULT_SERVICE = "curtain-bot"
+DEFAULT_REMOTE_ROOT = "/root/projects/tryon-bot"
+DEFAULT_SERVICE = "tryon-bot"
 
 
 def _load_env() -> None:
     load_dotenv(PROJECT_ROOT / ".env")
-    if FALLBACK_ENV_PATH.exists():
-        load_dotenv(FALLBACK_ENV_PATH, override=False)
 
 
 def _required(name: str) -> str:

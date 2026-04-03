@@ -2005,9 +2005,10 @@ async def start_flow(message: Message, state: FSMContext) -> None:
     )
     first_name = (message.from_user.first_name if message.from_user else "") or "ИМЯ"
     await message.answer(
-        f"Здравствуйте, {first_name}, давайте сделаем визуализацию ваших будущих жалюзи!\n\n"
-        "Но с начала, ознакомьтесь с нашей политикой конфиденциальности "
-        "(https://jalusi-spb.ru/botpolitics) и дайте согласие на обработку персональных данных\n\n"
+        f"Здравствуйте, {first_name}, давайте сделаем визуализацию!\n\n"
+        "Ознакомьтесь с нашей политикой конфиденциальности "
+        f"({os.getenv('PRIVACY_POLICY_URL', 'https://your-domain.com/privacy')}) "
+        "и дайте согласие на обработку персональных данных\n\n"
         "К сожалению, без этого никак(",
         reply_markup=build_privacy_keyboard(),
     )

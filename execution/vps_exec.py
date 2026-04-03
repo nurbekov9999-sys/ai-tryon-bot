@@ -12,10 +12,8 @@ try:
     from dotenv import load_dotenv
 
     PROJECT_ROOT = Path(__file__).resolve().parent.parent
-    FALLBACK_ENV_PATH = Path(r"O:\OpenCloud выгрузка\.env")
+    FALLBACK_ENV_PATH = None
     load_dotenv(PROJECT_ROOT / ".env")
-    if FALLBACK_ENV_PATH.exists():
-        load_dotenv(FALLBACK_ENV_PATH, override=False)
 except ImportError:
     pass
 
@@ -57,7 +55,7 @@ def main() -> int:
     )
     parser.add_argument(
         "command",
-        help="Remote shell command to run. Example: 'openclaw gateway status'",
+        help="Remote shell command to run. Example: 'systemctl status mybot'",
     )
     args = parser.parse_args()
 
